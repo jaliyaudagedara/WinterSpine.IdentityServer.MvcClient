@@ -67,6 +67,7 @@ namespace WinterSpine.IdentityServer.MvcClient
                 SaveTokens = true
             };
             options.Scope.Add("email"); // client requesting additioal claims
+            options.Scope.Add("role");
             app.UseOpenIdConnectAuthentication(options);
 
             app.UseStaticFiles();
